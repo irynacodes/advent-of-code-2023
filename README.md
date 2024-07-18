@@ -8,3 +8,4 @@ My goal is to use as many languages to solve the tasks as I can. I'll mostly cod
 - Day 1 – python
 - Day 2 – C#
 - Day 3 – C#
+- Day 4 – haskell
