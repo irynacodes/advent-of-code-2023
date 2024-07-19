@@ -5,7 +5,8 @@ My goal is to use as many languages to solve the tasks as I can. I'll mostly cod
 
 ## Languages used
 
-- Day 1 – python
+- Day 1 – Python
 - Day 2 – C#
 - Day 3 – C#
-- Day 4 – haskell
+- Day 4 – Haskell
+- Day 5 – Java (this is a good one)
