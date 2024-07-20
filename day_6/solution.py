@@ -1,29 +1,29 @@
 def process_race(race: tuple[int, int]) -> tuple[int, int]:
     time = race[0]
-    winningTime = find_winning(time // 2, race)
-    firstWinning = getLowestWinning(winningTime // 2, 0, winningTime, race)
-    lastWinning = getHighestWinning((winningTime + time) // 2, winningTime, time, race)
-    return (firstWinning, lastWinning)
+    winning_time = find_winning(time // 2, race)
+    first_winning = get_lowest_winning(winning_time // 2, 0, winning_time, race)
+    last_winning = get_highest_winning((winning_time + time) // 2, winning_time, time, race)
+    return (first_winning, last_winning)
 
 # of course it would be possible to unite these two almost identical functions into one
 # however, i think keeping them separate is just a bit more neat
-def getLowestWinning(time: int, lower: int, upper: int, race: tuple[int, int]) -> int:
+def get_lowest_winning(time: int, lower: int, upper: int, race: tuple[int, int]) -> int:
     if time == lower:
         return upper
 
     if is_time_winning(time, race):
-        return getLowestWinning((time + lower) // 2, lower, time, race)
+        return get_lowest_winning((time + lower) // 2, lower, time, race)
     else:
-        return getLowestWinning((time + upper) // 2, time, upper, race)
+        return get_lowest_winning((time + upper) // 2, time, upper, race)
 
-def getHighestWinning(time: int, lower: int, upper: int, race: tuple[int, int]) -> int:
+def get_highest_winning(time: int, lower: int, upper: int, race: tuple[int, int]) -> int:
     if time == lower:
         return lower
 
     if is_time_winning(time, race):
-        return getHighestWinning((time + upper) // 2, time, upper, race)
+        return get_highest_winning((time + upper) // 2, time, upper, race)
     else:
-        return getHighestWinning((time + lower) // 2, lower, time, race)
+        return get_highest_winning((time + lower) // 2, lower, time, race)
 
 def find_winning(holdTime: int, race: tuple[int, int]) -> int:
     raceTime = race[0]
