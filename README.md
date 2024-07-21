@@ -14,5 +14,5 @@ In my solutions, I take one thing as a given – the input file structure. There
 - Day 2 – C#
 - Day 3 – C#
 - Day 4 – Haskell
-- Day 5 – Java (this is pretty neat)
+- Day 5 – Java (this one is pretty neat)
 - Day 6 – Python
